@@ -1,6 +1,6 @@
 ---
 import type { Frontmatter } from '../type/data.type';
-const posts = await Astro.glob<Frontmatter>('./article/*.md');
+const posts = await Astro.glob<Frontmatter>('../article/*.md');
 import Layout from '../layouts/Layout.astro';
 import { Header } from '../components/Header';
 import { Banner } from '../components/Banner';
