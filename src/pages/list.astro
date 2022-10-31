@@ -1,0 +1,26 @@
+---
+interface Frontmatter {
+  title: string;
+  description?: string;
+}
+const posts = await Astro.glob<Frontmatter>('./article/*.md');
+import Layout from '../layouts/Layout.astro';
+import { Header } from '../components/Header';
+import { Banner } from '../components/Banner';
+import { Footer } from '../components/Footer';
+---
+
+<Layout title="Welcome to Astro.">
+	<Header />
+	<Banner />
+	<ul>
+		{posts.map(post => <li>
+		<a href="/article/1">
+			{post.frontmatter.title}	
+		</a>	
+		</li>)}
+		<!-- post.title will be `string`! -->
+	</ul>
+	<Footer />
+</Layout>
+
