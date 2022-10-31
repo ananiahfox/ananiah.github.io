@@ -10,7 +10,7 @@ export const ArticleItem: ArticleItemComponent = ({ article }) => {
         <div class="sm:w-24 md:w-24 lg:w-24 h-6 flex justify-between items-center ">
           <img src={DateSvg} width={16} alt="date" />
           <span class="text-slate-500 text-xs whitespace-nowrap">
-          {article?.frontmatter.time}
+            {article?.frontmatter.time}
           </span>
         </div>
         <p
