@@ -10,5 +10,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [solidJs(), tailwind()],
   site: 'https://ananiahfox.github.io',
-  base: '/blog',
+  base: '/',
 });

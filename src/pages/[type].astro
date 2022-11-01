@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Header } from '../components/Header';
+import { Banner } from '../components/Banner';
+import { Main } from '../components/Main';
+import { Footer } from '../components/Footer';
+import type { Frontmatter, MdSetting } from '../type/data.type';
+import _ from "lodash";
+
+export function getStaticPaths() {
+  return [
+    // 生成：/type/css
+    {params: {type: 'CSS'}},
+    {params: {type: 'React'}},
+    {params: {type: 'JavaScript'}},
+    {params: {type: 'Vue'}},
+  ];
+}
+const data = await Astro.glob<Frontmatter>('../article/*/*.md');
+
+const { type } = Astro.params;
+
+const currentValue = _.map(data, "frontmatter") as MdSetting[];
+
+const result = _.filter(currentValue, (o) => type === o.type);
+
+const metaTitle = `类型：${type}`;
+---
+
+<Layout title={metaTitle}>
+	<Header />
+	<Banner />
+	<Main data={result} />
+	<Footer />
+</Layout>
+

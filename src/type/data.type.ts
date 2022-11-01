@@ -7,5 +7,25 @@ export interface Frontmatter {
   time: string;
   description?: string;
 }
-export type MainComponent<P = { data: MarkdownInstance<Frontmatter>[] }> = Component<ParentProps<P>>;
-export type ArticleItemComponent<P = { article: MarkdownInstance<Frontmatter> }> = Component<ParentProps<P>>;
+export interface MdSetting  {
+  title: string;
+  date: string;
+  time: string;
+  type: string;
+  layout: string;
+};
+
+export interface ArticleItemInterface {
+  date: string,
+  value: MdSetting[]
+}
+export interface ArticleTypeInterface {
+  type?: string,
+  value?: number
+}
+
+
+export type RecordMdSetting = Record<string, MdSetting[]>;
+export type MainComponent<P = { data: MdSetting[] }> = Component<ParentProps<P>>;
+export type ArticleItemComponent<P = { article: ArticleItemInterface }> = Component<ParentProps<P>>;
+export type TagCloudComponent<P = { dataSource: ArticleTypeInterface[] }> = Component<ParentProps<P>>;
