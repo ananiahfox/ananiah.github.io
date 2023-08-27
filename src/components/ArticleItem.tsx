@@ -6,7 +6,6 @@ import { For } from "solid-js";
 export const ArticleItem: ArticleItemComponent = ({ article }) => {
   return (
     <div class="w-full">
-      <h1 class="text-base mt-2.5 italic">{article.date}</h1>
       <For each={article.value}>
         {(item) => (
           <div class="flex pt-3 pl-8 box-border">
