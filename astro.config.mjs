@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 import solidJs from "@astrojs/solid-js";
@@ -9,6 +9,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [solidJs(), tailwind()],
-  site: 'https://ananiahfox.github.io',
-  base: '/',
+  site: "https://ananiahfox.github.io",
+  base: "/blog",
 });
