@@ -1,4 +1,4 @@
-import banner1 from "../assets/images/banner.jpg"
+import banner1 from "@assets/images/banner.jpg"
 
 export const Banner = () => {
   return (

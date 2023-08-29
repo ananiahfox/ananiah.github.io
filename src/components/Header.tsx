@@ -1,5 +1,5 @@
-import { Logo } from "./Logo";
 import Night from "../assets/icon/night.svg";
+import { Logo } from "@Components/Logo";
 
 export const Header = () => {
   return (
