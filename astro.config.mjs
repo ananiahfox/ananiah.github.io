@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import path from "path";
+import remarkToc from "remark-toc";
 
 const __dirname = path.resolve();
 
@@ -22,5 +23,9 @@ export default defineConfig({
         assets: path.resolve(__dirname, "src/assets"),
       },
     },
+  },
+  markdown: {
+    // 应用于 .md 和 .mdx 文件
+    remarkPlugins: [remarkToc],
   },
 });

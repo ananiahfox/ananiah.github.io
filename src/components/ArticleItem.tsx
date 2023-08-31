@@ -1,6 +1,5 @@
 import DateSvg from "../assets/icon/date.svg";
 import type { ArticleItemComponent } from "../type/data.type";
-import _ from "lodash";
 import { For } from "solid-js";
 
 export const ArticleItem: ArticleItemComponent = ({ article }) => {
@@ -15,7 +14,7 @@ export const ArticleItem: ArticleItemComponent = ({ article }) => {
                 {item.time}
               </span>
             </div>
-            <p
+            <a
               class="
           w-11/12
           flex-initial
@@ -31,7 +30,7 @@ export const ArticleItem: ArticleItemComponent = ({ article }) => {
           leading-6"
             >
               {item.title}
-            </p>
+            </a>
           </div>
         )}
       </For>
