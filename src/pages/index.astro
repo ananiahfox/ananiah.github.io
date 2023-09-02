@@ -2,16 +2,16 @@
 import type { Frontmatter, MdSetting } from '../type/data.type';
 import "../styles/global.css"
 const data = await Astro.glob<Frontmatter>('../content/*/*.md');
-import { Header } from 'src/components/Header';
-import { Footer } from 'src/components/Footer';
 import Layout from 'src/layouts/Layout.astro';
 import { Main } from '@/components/Main';
+import Header from '@/components/Header.svelte';
+import Footer from '@/components/Footer.svelte';
 
 const currentValue = data.map(item => item.frontmatter) as MdSetting[];
 ---
 
 <Layout title="Welcome to Astro.">
 	<Header />
-	<Main data={currentValue} />
+	<!-- <Main data={currentValue} /> -->
 	<Footer />
 </Layout>
