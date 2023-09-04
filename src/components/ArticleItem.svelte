@@ -23,7 +23,7 @@
     @apply flex pt-3 pl-8 box-border;
   }
   .item {
-    @apply sm:w-24 md:w-24 lg:w-24 h-6 flex justify-between items-center;
+    @apply w-24 sm:w-24 md:w-24 lg:w-24 h-6 flex justify-between items-center;
   }
   .link {
     @apply w-11/12 flex-initial text-sm border-b border-transparent text-slate-400 cursor-pointer sm:px-6 md:px-6 lg:px-4 box-border leading-6;

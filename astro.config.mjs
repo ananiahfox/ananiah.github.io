@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import path from "path";
 import remarkToc from "remark-toc";
-import sveltePreprocess from "svelte-preprocess";
 
 const __dirname = path.resolve();
 
@@ -13,12 +12,7 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    svelte({
-      preprocess: sveltePreprocess(),
-    }),
-  ],
+  integrations: [svelte(), tailwind()],
   site: "https://ananiahfox.github.io",
   base: "/",
   vite: {
