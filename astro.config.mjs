@@ -2,25 +2,17 @@ import { defineConfig } from "astro/config";
 import path from "path";
 import remarkToc from "remark-toc";
 
-const __dirname = path.resolve();
-
-// https://astro.build/config
 import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
-import svelte from "@astrojs/svelte";
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [svelte(), tailwind()],
+  integrations: [tailwind()],
   site: "https://ananiahfox.github.io",
   base: "/",
   vite: {
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "src"),
-        components: path.resolve(__dirname, "src/components"),
-        assets: path.resolve(__dirname, "src/assets"),
+        "@components/*": ["src/components/*"],
+        "@assets/*": ["src/assets/*"],
       },
     },
   },
