@@ -1,12 +1,15 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"],
   "compilerOptions": {
     "jsx": "preserve",
-    "jsxImportSource": "solid-js",
+    "jsxImportSource": "svelte",
     "baseUrl": ".",
+    "allowJs": true,
     "paths": {
       "@/*": ["src/*"],
-      "@Components/*": ["src/Components/*"],
+      "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"]
     }
   }
