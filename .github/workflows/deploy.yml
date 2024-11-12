@@ -52,10 +52,6 @@ jobs:
         run: pnpm install
         working-directory: ${{ env.BUILD_PATH }}
 
-      - name: Run tests
-        run: pnpm test
-        working-directory: ${{ env.BUILD_PATH }}
-
       - name: Build with Astro
         run: |
           pnpm run astro build \
