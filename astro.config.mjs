@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: "https://ananiahfox.github.io",
-  base: "/",
+  base: "/dist",
   vite: {
     resolve: {
       alias: {
