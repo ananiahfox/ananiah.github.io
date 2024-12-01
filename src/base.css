@@ -19,10 +19,6 @@
   --color-success: #16a34a;
   --color-warning: #d97706;
   --color-error: oklch(65.72% 0.199 27.33);
-  --rounded-box: 0.4rem;
-  --rounded-btn: 0.4rem;
-  --rounded-badge: 0.4rem;
-  --tab-radius: 0.4rem;
 }
 html,
 body {
