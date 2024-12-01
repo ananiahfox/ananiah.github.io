@@ -1,3 +1,18 @@
-<div class="text-primary">
-  Header
-</div>
+---
+import Container from "./Container.astro";
+import Search from "./Search.astro";
+---
+
+<header>
+  <Container>
+    <div
+      class="h-12 flex items-center justify-between border-b border-gray-200"
+    >
+      <div>Crane</div>
+      <div class="flex gap-x-2">
+        <Search />
+        <div>黑暗模式</div>
+      </div>
+    </div>
+  </Container>
+</header>

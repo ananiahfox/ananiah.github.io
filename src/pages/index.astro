@@ -1,12 +1,12 @@
 ---
-import Container from "@/components/Container.astro";
+import List from "@/components/List.astro";
 import Layout from "@/layouts/Layout.astro";
 
-console.log(Astro,'31231231')
+console.log(Astro, "31231231");
+const items = new Array(10).fill(0);
+console.log(items), "312321";
 ---
 
-<Layout title="Welcome to Astro."> 
-<Container>
-<div class="text-primary">31231</div>  
-</Container>  
+<Layout title="Welcome to Astro.">
+  {items.map((_, index) => <List key={index} />)}
 </Layout>
